@@ -54,6 +54,18 @@ namespace UcClient_10_5.Tests
         {
             var axlClient = new AxlClient(new AxlClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
 
+            var appresult = axlClient.Execute(client =>
+            {
+                var res = client.getAppUser(new GetAppUserReq
+                {
+                    ItemElementName = ItemChoiceType102.userid,
+                    Item = "administrator"
+                });
+                return res.@return;
+            });
+
+            Assert.IsNull(appresult.Exception);
+
             var addUserResult = axlClient.Execute(async client =>
             {
                 var userId = Guid.NewGuid().ToString();
