@@ -1,0 +1,10 @@
+D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\obj\Debug\UcClient_10_5.Tests.csprojResolveAssemblyReference.cache
+D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\bin\Debug\UcClient_10_5.Tests.dll
+D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\bin\Debug\UcClient_10_5.Tests.pdb
+D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\bin\Debug\GeneratedAxl_10_5.dll
+D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\bin\Debug\UcClient.dll
+D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\bin\Debug\GeneratedAxl_10_5.pdb
+D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\bin\Debug\UcClient.pdb
+D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\obj\Debug\UcClient_10_5.Tests.dll
+D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\obj\Debug\UcClient_10_5.Tests.pdb
