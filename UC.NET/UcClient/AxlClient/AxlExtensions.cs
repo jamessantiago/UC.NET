@@ -8,7 +8,7 @@ namespace AxlNetClient
 {
     public static class AxlExtensions
     {
-        public static XFkType DefaultOrNullIfEmpty(this XFkType data)
+        public static XFkType NullIfEmpty(this XFkType data)
         {
             return string.IsNullOrEmpty(data.uuid) && string.IsNullOrEmpty(data.Value) ? null : data;
         }
