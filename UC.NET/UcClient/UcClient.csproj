@@ -45,6 +45,7 @@
     <Compile Include="AxlClient\AxlClient.cs" />
     <Compile Include="AxlClient\AxlClientFactory.cs" />
     <Compile Include="AxlClient\AxlClientSettings.cs" />
+    <Compile Include="AxlClient\AxlExtensions.cs" />
     <Compile Include="AxlClient\AxlResult.cs" />
     <Compile Include="AxlClient\IAxlClient.cs" />
     <Compile Include="AxlClient\IAxlClientFactory.cs" />
