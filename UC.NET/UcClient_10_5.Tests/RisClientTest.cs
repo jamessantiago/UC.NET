@@ -24,8 +24,9 @@ namespace UcClient_10_5.Tests
                     Model = 255, //refers to any device, full listing here: https://developer.cisco.com/site/sxml/documents/api-reference/risport/#ModelTable
                     Status = "Any",
                     NodeName = string.Empty, //null for all nodes
-                    SelectBy = CmSelectBy.DirNumber,
-                    SelectItems = new ArrayOfSelectItem() { new SelectItem() { Item = "1001" } },
+                    SelectBy = CmSelectBy.Name,
+                    SelectItems = new ArrayOfSelectItem() { new SelectItem() { Item = "SIPTrunktoCUP" } },
+                    //SelectItems = new ArrayOfSelectItem(),  //black for everything
                     Protocol = ProtocolType.Any,
                     DownloadStatus = DeviceDownloadStatus.Any,
                 };

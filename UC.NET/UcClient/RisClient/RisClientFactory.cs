@@ -5,7 +5,7 @@ namespace RisNetClient
 {
     public class RisClientFactory : IRisClientFactory
     {
-        private const string RisEndpointUrlFormat = "https://{0}:8443/realtimeservice2/services/RISService";
+        private const string RisEndpointUrlFormat = "https://{0}:8443/realtimeservice2/services/RISService70";
 
         public RisPortTypeClient CreateClient(IRisClientSettings settings)
         {
