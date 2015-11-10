@@ -8,3 +8,5 @@ D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\bin\Debug\GeneratedAxl_10_5.pdb
 D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\bin\Debug\UcClient.pdb
 D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\obj\Debug\UcClient_10_5.Tests.dll
 D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\obj\Debug\UcClient_10_5.Tests.pdb
+D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\bin\Debug\GeneratedRis_10_5.dll
+D:\Code\UC.NET\UC.NET\UcClient_10_5.Tests\bin\Debug\GeneratedRis_10_5.pdb

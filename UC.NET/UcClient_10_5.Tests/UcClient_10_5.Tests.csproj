@@ -51,6 +51,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="RisClientTest.cs" />
     <Compile Include="AxlClientTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -58,6 +59,10 @@
     <ProjectReference Include="..\GeneratedAxl_10_5\GeneratedAxl_10_5.csproj">
       <Project>{10fa10d2-fdfb-42a6-bd58-59f39bf9cf5c}</Project>
       <Name>GeneratedAxl_10_5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeneratedRis_10_5\GeneratedRis_10_5.csproj">
+      <Project>{1d440205-6f11-46b7-8eac-3b105a4cdd24}</Project>
+      <Name>GeneratedRis_10_5</Name>
     </ProjectReference>
     <ProjectReference Include="..\UcClient\UcClient.csproj">
       <Project>{75ffe5e5-472d-4bfd-b3d9-e86722fa8c7a}</Project>

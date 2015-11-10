@@ -45,18 +45,29 @@
     <Compile Include="AxlClient\AxlClient.cs" />
     <Compile Include="AxlClient\AxlClientFactory.cs" />
     <Compile Include="AxlClient\AxlClientSettings.cs" />
-    <Compile Include="AxlClient\AxlExtensions.cs" />
     <Compile Include="AxlClient\AxlResult.cs" />
     <Compile Include="AxlClient\IAxlClient.cs" />
     <Compile Include="AxlClient\IAxlClientFactory.cs" />
     <Compile Include="AxlClient\IAxlClientSettings.cs" />
     <Compile Include="AxlClient\IAxlResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RisClient\RisClient.cs" />
+    <Compile Include="RisClient\RisClientFactory.cs" />
+    <Compile Include="RisClient\RisClientSettings.cs" />
+    <Compile Include="RisClient\RisResult.cs" />
+    <Compile Include="RisClient\IRisClient.cs" />
+    <Compile Include="RisClient\IRisClientFactory.cs" />
+    <Compile Include="RisClient\IRisClientSettings.cs" />
+    <Compile Include="RisClient\IRisResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GeneratedAxl_10_5\GeneratedAxl_10_5.csproj">
       <Project>{10fa10d2-fdfb-42a6-bd58-59f39bf9cf5c}</Project>
       <Name>GeneratedAxl_10_5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeneratedRis_10_5\GeneratedRis_10_5.csproj">
+      <Project>{1d440205-6f11-46b7-8eac-3b105a4cdd24}</Project>
+      <Name>GeneratedRis_10_5</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
