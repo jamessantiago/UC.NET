@@ -11,6 +11,7 @@ The UcClient library can be used with any of the versioned client libraries such
 Example
 -------
 
+```c#
     public bool SipTrunktoCupExists()
     {
         var risClient = new RisClient(new UcClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
