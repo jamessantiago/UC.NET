@@ -1,5 +1,6 @@
 using System.Net;
 using System.ServiceModel;
+using UcNetClient;
 
 namespace AxlNetClient
 {
@@ -7,7 +8,7 @@ namespace AxlNetClient
     {
         private const string AxlEndpointUrlFormat = "https://{0}:8443/axl/";
 
-        public AXLPortClient CreateClient(IAxlClientSettings settings)
+        public AXLPortClient CreateClient(IUcClientSettings settings)
         {
             ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, errors) => true;
             ServicePointManager.Expect100Continue = false;

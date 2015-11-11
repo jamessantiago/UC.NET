@@ -1,7 +1,9 @@
+using UcNetClient;
+
 namespace RisNetClient
 {
     public interface IRisClientFactory
     {
-        RisPortTypeClient CreateClient(IRisClientSettings settings);
+        RisPortTypeClient CreateClient(IUcClientSettings settings);
     }
 }

@@ -1,8 +1,8 @@
 using System;
 
-namespace RisNetClient
+namespace UcNetClient
 {
-    public class RisResult<TResult> : IRisResult<TResult>
+    public class UcResult<TResult> : IUcResult<TResult>
     {
         public TResult Value { get; set; }
 

@@ -4,6 +4,7 @@ using AxlNetClient;
 using System.Linq;
 using System.Threading.Tasks;
 using RisNetClient;
+using UcNetClient;
 
 namespace UcClient_10_5.Tests
 {
@@ -13,7 +14,7 @@ namespace UcClient_10_5.Tests
         [TestMethod]
         public void SelecCmDevice()
         {
-            var risClient = new RisClient(new RisClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
+            var risClient = new RisClient(new UcClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
 
             var result = risClient.Execute(client =>
             {

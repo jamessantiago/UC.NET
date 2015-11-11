@@ -1,6 +1,6 @@
-namespace RisNetClient
+namespace UcNetClient
 {
-    public class RisClientSettings : IRisClientSettings
+    public class UcClientSettings : IUcClientSettings
     {
         public string Server { get; set; }
 

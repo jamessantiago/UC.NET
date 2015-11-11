@@ -1,16 +1,17 @@
 using System;
 using System.Threading.Tasks;
+using UcNetClient;
 
 namespace AxlNetClient
 {
     public interface IAxlClient
     {
-        Task<IAxlResult<TResultValue>> ExecuteAsync<TResultValue>(Func<AXLPortClient, Task<TResultValue>> execute);
+        Task<IUcResult<TResultValue>> ExecuteAsync<TResultValue>(Func<AXLPortClient, Task<TResultValue>> execute);
 
-        IAxlResult<TResultValue> Execute<TResultValue>(Func<AXLPortClient, TResultValue> execute);
+        IUcResult<TResultValue> Execute<TResultValue>(Func<AXLPortClient, TResultValue> execute);
 
-        Task<IAxlResult<bool>> ExecuteAsync(Func<AXLPortClient, Task> execute);
+        Task<IUcResult<bool>> ExecuteAsync(Func<AXLPortClient, Task> execute);
 
-        IAxlResult<bool> Execute(Action<AXLPortClient> execute);
+        IUcResult<bool> Execute(Action<AXLPortClient> execute);
     }
 }

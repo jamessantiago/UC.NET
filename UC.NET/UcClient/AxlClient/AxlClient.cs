@@ -1,28 +1,29 @@
 using System;
 using System.ServiceModel;
 using System.Threading.Tasks;
+using UcNetClient;
 
 namespace AxlNetClient
 {
     public class AxlClient : IAxlClient
     {
         private readonly IAxlClientFactory clientFactory;
-        private readonly IAxlClientSettings clientSettings;
+        private readonly IUcClientSettings clientSettings;
 
-        public AxlClient(IAxlClientSettings clientSettings) :
+        public AxlClient(IUcClientSettings clientSettings) :
             this(new AxlClientFactory(), clientSettings)
         {
         }
 
-        public AxlClient(IAxlClientFactory clientFactory, IAxlClientSettings clientSettings)
+        public AxlClient(IAxlClientFactory clientFactory, IUcClientSettings clientSettings)
         {
             this.clientFactory = clientFactory;
             this.clientSettings = clientSettings;
         }
 
-        public async Task<IAxlResult<TResultValue>> ExecuteAsync<TResultValue>(Func<AXLPortClient, Task<TResultValue>> execute)
+        public async Task<IUcResult<TResultValue>> ExecuteAsync<TResultValue>(Func<AXLPortClient, Task<TResultValue>> execute)
         {
-            var result = new AxlResult<TResultValue>();
+            var result = new UcResult<TResultValue>();
             var client = this.clientFactory.CreateClient(this.clientSettings);
             try
             {
@@ -47,9 +48,9 @@ namespace AxlNetClient
             return result;
         }
 
-        public IAxlResult<TResultValue> Execute<TResultValue>(Func<AXLPortClient, TResultValue> execute)
+        public IUcResult<TResultValue> Execute<TResultValue>(Func<AXLPortClient, TResultValue> execute)
         {
-            var result = new AxlResult<TResultValue>();
+            var result = new UcResult<TResultValue>();
             var client = this.clientFactory.CreateClient(this.clientSettings);
             try
             {
@@ -74,9 +75,9 @@ namespace AxlNetClient
             return result;
         }
 
-        public async Task<IAxlResult<bool>> ExecuteAsync(Func<AXLPortClient, Task> execute)
+        public async Task<IUcResult<bool>> ExecuteAsync(Func<AXLPortClient, Task> execute)
         {
-            var result = new AxlResult<bool>();
+            var result = new UcResult<bool>();
             var client = this.clientFactory.CreateClient(this.clientSettings);
             try
             {
@@ -102,9 +103,9 @@ namespace AxlNetClient
             return result;
         }
 
-        public IAxlResult<bool> Execute(Action<AXLPortClient> execute)
+        public IUcResult<bool> Execute(Action<AXLPortClient> execute)
         {
-            var result = new AxlResult<bool>();
+            var result = new UcResult<bool>();
             var client = this.clientFactory.CreateClient(this.clientSettings);
             try
             {

@@ -1,16 +1,17 @@
 using System;
 using System.Threading.Tasks;
+using UcNetClient;
 
 namespace RisNetClient
 {
     public interface IRisClient
     {
-        Task<IRisResult<TResultValue>> ExecuteAsync<TResultValue>(Func<RisPortTypeClient, Task<TResultValue>> execute);
+        Task<IUcResult<TResultValue>> ExecuteAsync<TResultValue>(Func<RisPortTypeClient, Task<TResultValue>> execute);
 
-        IRisResult<TResultValue> Execute<TResultValue>(Func<RisPortTypeClient, TResultValue> execute);
+        IUcResult<TResultValue> Execute<TResultValue>(Func<RisPortTypeClient, TResultValue> execute);
 
-        Task<IRisResult<bool>> ExecuteAsync(Func<RisPortTypeClient, Task> execute);
+        Task<IUcResult<bool>> ExecuteAsync(Func<RisPortTypeClient, Task> execute);
 
-        IRisResult<bool> Execute(Action<RisPortTypeClient> execute);
+        IUcResult<bool> Execute(Action<RisPortTypeClient> execute);
     }
 }

@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AxlNetClient;
 using System.Linq;
 using System.Threading.Tasks;
+using UcNetClient;
 
 namespace UcClient_10_5.Tests
 {
@@ -12,7 +13,7 @@ namespace UcClient_10_5.Tests
         [TestMethod]
         public async Task CreateUser()
         {
-            var axlClient = new AxlClient(new AxlClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
+            var axlClient = new AxlClient(new UcClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
 
             var addUserResult = await axlClient.ExecuteAsync(async client =>
             {
@@ -52,7 +53,7 @@ namespace UcClient_10_5.Tests
         [TestMethod]
         public void CreateUser2()
         {
-            var axlClient = new AxlClient(new AxlClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
+            var axlClient = new AxlClient(new UcClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
 
             var appresult = axlClient.Execute(client =>
             {
@@ -104,7 +105,7 @@ namespace UcClient_10_5.Tests
         //[TestMethod]
         //public void AddPhone()
         //{
-        //    var axlClient = new AxlClient(new AxlClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
+        //    var axlClient = new AxlClient(new UcClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
 
         //    var addPhone = axlClient.Execute(async client =>
         //    {
@@ -125,7 +126,7 @@ namespace UcClient_10_5.Tests
         [TestMethod]
         public async Task QueryDatabase()
         {
-            var axlClient = new AxlClient(new AxlClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
+            var axlClient = new AxlClient(new UcClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
 
             var data = await axlClient.ExecuteAsync(async client =>
             {
@@ -145,7 +146,7 @@ namespace UcClient_10_5.Tests
         [TestMethod]
         public void GetPhone()
         {
-            var axlClient = new AxlClient(new AxlClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
+            var axlClient = new AxlClient(new UcClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
 
             var data = axlClient.Execute(client =>
             {

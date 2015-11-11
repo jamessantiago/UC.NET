@@ -1,5 +1,6 @@
 using System.Net;
 using System.ServiceModel;
+using UcNetClient;
 
 namespace RisNetClient
 {
@@ -7,7 +8,7 @@ namespace RisNetClient
     {
         private const string RisEndpointUrlFormat = "https://{0}:8443/realtimeservice2/services/RISService70";
 
-        public RisPortTypeClient CreateClient(IRisClientSettings settings)
+        public RisPortTypeClient CreateClient(IUcClientSettings settings)
         {
             ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, errors) => true;
             ServicePointManager.Expect100Continue = false;

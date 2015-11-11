@@ -1,8 +1,8 @@
 using System;
 
-namespace AxlNetClient
+namespace UcNetClient
 {
-    public interface IAxlResult<TResult>
+    public interface IUcResult<TResult>
     {
         TResult Value { get; set; }
 

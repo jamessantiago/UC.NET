@@ -1,28 +1,29 @@
 using System;
 using System.ServiceModel;
 using System.Threading.Tasks;
+using UcNetClient;
 
 namespace RisNetClient
 {
     public class RisClient : IRisClient
     {
         private readonly IRisClientFactory clientFactory;
-        private readonly IRisClientSettings clientSettings;
+        private readonly IUcClientSettings clientSettings;
 
-        public RisClient(IRisClientSettings clientSettings) :
+        public RisClient(IUcClientSettings clientSettings) :
             this(new RisClientFactory(), clientSettings)
         {
         }
 
-        public RisClient(IRisClientFactory clientFactory, IRisClientSettings clientSettings)
+        public RisClient(IRisClientFactory clientFactory, IUcClientSettings clientSettings)
         {
             this.clientFactory = clientFactory;
             this.clientSettings = clientSettings;
         }
 
-        public async Task<IRisResult<TResultValue>> ExecuteAsync<TResultValue>(Func<RisPortTypeClient, Task<TResultValue>> execute)
+        public async Task<IUcResult<TResultValue>> ExecuteAsync<TResultValue>(Func<RisPortTypeClient, Task<TResultValue>> execute)
         {
-            var result = new RisResult<TResultValue>();
+            var result = new UcResult<TResultValue>();
             var client = this.clientFactory.CreateClient(this.clientSettings);
             try
             {
@@ -47,9 +48,9 @@ namespace RisNetClient
             return result;
         }
 
-        public IRisResult<TResultValue> Execute<TResultValue>(Func<RisPortTypeClient, TResultValue> execute)
+        public IUcResult<TResultValue> Execute<TResultValue>(Func<RisPortTypeClient, TResultValue> execute)
         {
-            var result = new RisResult<TResultValue>();
+            var result = new UcResult<TResultValue>();
             var client = this.clientFactory.CreateClient(this.clientSettings);
             try
             {
@@ -74,9 +75,9 @@ namespace RisNetClient
             return result;
         }
 
-        public async Task<IRisResult<bool>> ExecuteAsync(Func<RisPortTypeClient, Task> execute)
+        public async Task<IUcResult<bool>> ExecuteAsync(Func<RisPortTypeClient, Task> execute)
         {
-            var result = new RisResult<bool>();
+            var result = new UcResult<bool>();
             var client = this.clientFactory.CreateClient(this.clientSettings);
             try
             {
@@ -102,9 +103,9 @@ namespace RisNetClient
             return result;
         }
 
-        public IRisResult<bool> Execute(Action<RisPortTypeClient> execute)
+        public IUcResult<bool> Execute(Action<RisPortTypeClient> execute)
         {
-            var result = new RisResult<bool>();
+            var result = new UcResult<bool>();
             var client = this.clientFactory.CreateClient(this.clientSettings);
             try
             {

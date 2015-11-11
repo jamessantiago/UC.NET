@@ -44,21 +44,17 @@
   <ItemGroup>
     <Compile Include="AxlClient\AxlClient.cs" />
     <Compile Include="AxlClient\AxlClientFactory.cs" />
-    <Compile Include="AxlClient\AxlClientSettings.cs" />
-    <Compile Include="AxlClient\AxlResult.cs" />
     <Compile Include="AxlClient\IAxlClient.cs" />
     <Compile Include="AxlClient\IAxlClientFactory.cs" />
-    <Compile Include="AxlClient\IAxlClientSettings.cs" />
-    <Compile Include="AxlClient\IAxlResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RisClient\RisClient.cs" />
     <Compile Include="RisClient\RisClientFactory.cs" />
-    <Compile Include="RisClient\RisClientSettings.cs" />
-    <Compile Include="RisClient\RisResult.cs" />
     <Compile Include="RisClient\IRisClient.cs" />
     <Compile Include="RisClient\IRisClientFactory.cs" />
-    <Compile Include="RisClient\IRisClientSettings.cs" />
-    <Compile Include="RisClient\IRisResult.cs" />
+    <Compile Include="UcClient\UcResult.cs" />
+    <Compile Include="UcClient\UcClientSettings.cs" />
+    <Compile Include="UcClient\IUcClientSettings.cs" />
+    <Compile Include="UcClient\IUcResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GeneratedAxl_10_5\GeneratedAxl_10_5.csproj">
