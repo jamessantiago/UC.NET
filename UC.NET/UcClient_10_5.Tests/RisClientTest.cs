@@ -27,7 +27,7 @@ namespace UcClient_10_5.Tests
                     NodeName = string.Empty, //null for all nodes
                     SelectBy = CmSelectBy.Name,
                     SelectItems = new ArrayOfSelectItem() { new SelectItem() { Item = "SIPTrunktoCUP" } },
-                    //SelectItems = new ArrayOfSelectItem(),  //black for everything
+                    //SelectItems = new ArrayOfSelectItem(),  //blank for everything
                     Protocol = ProtocolType.Any,
                     DownloadStatus = DeviceDownloadStatus.Any,
                 };
