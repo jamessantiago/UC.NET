@@ -160,5 +160,58 @@ namespace UcClient_10_5.Tests
 
             Assert.IsNotNull(data);
         }
+
+        [TestMethod]
+        public void EnableUser()
+        {
+            var axlClient = new AxlClient(new UcClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
+
+            var data = axlClient.Execute(client =>
+            {
+                var res = client.updateUser(new UpdateUserReq
+                {
+                    ItemElementName = ItemChoiceType6.userid,
+                    Item = "user01",
+                    homeCluster = "true"
+                });
+                return res.@return;
+            });
+
+            Assert.IsTrue(data.Exception == null | data.Exception.Message == "");
+
+            var data2 = axlClient.Execute(client =>
+            {
+                var res = client.updateUser(new UpdateUserReq
+                {
+                    ItemElementName = ItemChoiceType6.userid,
+                    Item = "user01",
+                    imAndPresenceEnable = "true"
+                });
+                return res.@return;
+            });
+
+            Assert.IsTrue(data2.Exception == null | data2.Exception.Message == "");
+        }
+
+        [TestMethod]
+        public void DisableUser()
+        {
+            var axlClient = new AxlClient(new UcClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
+
+            var data = axlClient.Execute(client =>
+            {
+                var res = client.updateUser(new UpdateUserReq
+                {
+                    ItemElementName = ItemChoiceType6.userid,
+                    Item = "user01",
+                    homeCluster = "false",
+                    imAndPresenceEnable = "false",
+                    calendarPresence = "false"
+                });
+                return res.@return;
+            });
+
+            Assert.IsNull(data.Exception);
+        }
     }
 }
