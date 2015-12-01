@@ -18,7 +18,8 @@ namespace WebexNetClient
                 webExID = settings.User,
                 password = settings.Password,                
                 partnerID = settings.PartnetId,
-                email = settings.Email
+                email = settings.Email,
+                siteName = settings.SiteName
             };            
             var webexClient = new WebexApiClient(webexEndpointUrl, securityContext);
             return webexClient;

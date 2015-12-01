@@ -10,6 +10,8 @@ namespace UcNetClient
 
         public long SiteId { get; set; }
 
+        public string SiteName { get; set; }
+
         public string PartnetId { get; set; }
 
         public string Email { get; set; }

@@ -4312,7 +4312,11 @@ namespace WebexNetClient {
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("GMT-01:00, Azores (Azores)")]
         GMT0100AzoresAzores,
-        
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Greenwich Time (Reykjavik, GMT)")]
+        GMT0000GreenwichTime,
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("GMT+00:00, Greenwich (Casablanca)")]
         GMT0000GreenwichCasablanca,
