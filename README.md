@@ -6,7 +6,7 @@ A generalized UC client.
 Usage
 -----
 
-The UcClient library can be used with any of the versioned client libraries such as Axl or Sxml.  Just reference UcClient along with a generated api client similar to the unit tests.
+The UcClient library can be used with any of the versioned client libraries such as Axl, Sxml, or even with the non-soap APIs such as webex's XML based REST API.  Just reference UcClient along with a generated api client similar to the unit tests.
 
 Example
 -------
