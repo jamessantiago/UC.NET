@@ -6,6 +6,6 @@ namespace UcNetClient
 
         string User { get; set; }
 
-        string Password { get; set; }
+        string Password { get; set; }        
     }
 }

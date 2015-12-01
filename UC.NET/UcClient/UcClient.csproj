@@ -30,9 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.Web" />
@@ -55,6 +60,11 @@
     <Compile Include="UcClient\UcClientSettings.cs" />
     <Compile Include="UcClient\IUcClientSettings.cs" />
     <Compile Include="UcClient\IUcResult.cs" />
+    <Compile Include="WebexClient\IWebexClient.cs" />
+    <Compile Include="WebexClient\IWebexClientFactory.cs" />
+    <Compile Include="WebexClient\UcClientSettings.cs" />
+    <Compile Include="WebexClient\WebexClient.cs" />
+    <Compile Include="WebexClient\WebexClientFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GeneratedAxl_10_5\GeneratedAxl_10_5.csproj">
@@ -65,7 +75,15 @@
       <Project>{1d440205-6f11-46b7-8eac-3b105a4cdd24}</Project>
       <Name>GeneratedRis_10_5</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GeneratedWebexXml_5_8\GeneratedWebexXml_5_8.csproj">
+      <Project>{c22c6b60-8f19-47e1-8e64-9efb60426fa9}</Project>
+      <Name>GeneratedWebexXml_5_8</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

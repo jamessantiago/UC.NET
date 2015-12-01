@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratedRis_10_5", "Genera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UcClient_10_5.Tests", "UcClient_10_5.Tests\UcClient_10_5.Tests.csproj", "{7CFB32DC-1E64-4704-86B5-25F2B751EC06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratedWebexXml_5_8", "GeneratedWebexXml_5_8\GeneratedWebexXml_5_8.csproj", "{C22C6B60-8F19-47E1-8E64-9EFB60426FA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{7CFB32DC-1E64-4704-86B5-25F2B751EC06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CFB32DC-1E64-4704-86B5-25F2B751EC06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CFB32DC-1E64-4704-86B5-25F2B751EC06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C22C6B60-8F19-47E1-8E64-9EFB60426FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C22C6B60-8F19-47E1-8E64-9EFB60426FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C22C6B60-8F19-47E1-8E64-9EFB60426FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C22C6B60-8F19-47E1-8E64-9EFB60426FA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

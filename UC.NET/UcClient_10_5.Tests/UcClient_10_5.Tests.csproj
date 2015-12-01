@@ -54,6 +54,7 @@
     <Compile Include="RisClientTest.cs" />
     <Compile Include="AxlClientTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebexClientTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GeneratedAxl_10_5\GeneratedAxl_10_5.csproj">
@@ -63,6 +64,10 @@
     <ProjectReference Include="..\GeneratedRis_10_5\GeneratedRis_10_5.csproj">
       <Project>{1d440205-6f11-46b7-8eac-3b105a4cdd24}</Project>
       <Name>GeneratedRis_10_5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeneratedWebexXml_5_8\GeneratedWebexXml_5_8.csproj">
+      <Project>{c22c6b60-8f19-47e1-8e64-9efb60426fa9}</Project>
+      <Name>GeneratedWebexXml_5_8</Name>
     </ProjectReference>
     <ProjectReference Include="..\UcClient\UcClient.csproj">
       <Project>{75ffe5e5-472d-4bfd-b3d9-e86722fa8c7a}</Project>
