@@ -4440,7 +4440,10 @@ namespace WebexNetClient {
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("GMT+09:00, Korea (Seoul)")]
         GMT0900KoreaSeoul,
-        
+
+        [System.Xml.Serialization.XmlEnumAttribute("Korea Time (Seoul, GMT+09:00)")]
+        GMT0900KoreaTimeSeoul,
+
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("GMT+09:30, Yakutsk (Yakutsk)")]
         GMT0930YakutskYakutsk,

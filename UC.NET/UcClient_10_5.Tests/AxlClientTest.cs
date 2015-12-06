@@ -158,7 +158,9 @@ namespace UcClient_10_5.Tests
                 return res.@return.phone;
             });
 
-            Assert.IsNotNull(data);
+            if (data.Exception != null) throw data.Exception;
+
+            Assert.IsNotNull(data.Value);
         }
 
         [TestMethod]
