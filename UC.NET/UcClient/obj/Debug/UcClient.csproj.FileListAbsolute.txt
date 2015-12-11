@@ -11,3 +11,5 @@ D:\Code\UC.NET\UC.NET\UcClient\bin\Debug\GeneratedWebexXml_5_8.dll
 D:\Code\UC.NET\UC.NET\UcClient\bin\Debug\Newtonsoft.Json.dll
 D:\Code\UC.NET\UC.NET\UcClient\bin\Debug\GeneratedWebexXml_5_8.pdb
 D:\Code\UC.NET\UC.NET\UcClient\bin\Debug\Newtonsoft.Json.xml
+D:\Code\UC.NET\UC.NET\UcClient\bin\Debug\GeneratedPerf_10_5.dll
+D:\Code\UC.NET\UC.NET\UcClient\bin\Debug\GeneratedPerf_10_5.pdb

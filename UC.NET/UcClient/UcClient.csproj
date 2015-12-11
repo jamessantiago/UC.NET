@@ -47,6 +47,10 @@
     <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PerfClient\PerfClient.cs" />
+    <Compile Include="PerfClient\PerfClientFactory.cs" />
+    <Compile Include="PerfClient\IPerfClient.cs" />
+    <Compile Include="PerfClient\IPerfClientFactory.cs" />
     <Compile Include="AxlClient\AxlClient.cs" />
     <Compile Include="AxlClient\AxlClientFactory.cs" />
     <Compile Include="AxlClient\IAxlClient.cs" />
@@ -70,6 +74,10 @@
     <ProjectReference Include="..\GeneratedAxl_10_5\GeneratedAxl_10_5.csproj">
       <Project>{10fa10d2-fdfb-42a6-bd58-59f39bf9cf5c}</Project>
       <Name>GeneratedAxl_10_5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeneratedPerf_10_5\GeneratedPerf_10_5.csproj">
+      <Project>{56b36d96-9bbf-435f-9437-67c5c12ba586}</Project>
+      <Name>GeneratedPerf_10_5</Name>
     </ProjectReference>
     <ProjectReference Include="..\GeneratedRis_10_5\GeneratedRis_10_5.csproj">
       <Project>{1d440205-6f11-46b7-8eac-3b105a4cdd24}</Project>
