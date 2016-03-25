@@ -5,17 +5,17 @@ using UcNetClient;
 
 namespace PerfNetClient
 {
-    public class AxlClient : IPerfClient
+    public class PerfClient : IPerfClient
     {
         private readonly IPerfClientFactory clientFactory;
         private readonly IUcClientSettings clientSettings;
 
-        public AxlClient(IUcClientSettings clientSettings) :
+        public PerfClient(IUcClientSettings clientSettings) :
             this(new PerfClientFactory(), clientSettings)
         {
         }
 
-        public AxlClient(IPerfClientFactory clientFactory, IUcClientSettings clientSettings)
+        public PerfClient(IPerfClientFactory clientFactory, IUcClientSettings clientSettings)
         {
             this.clientFactory = clientFactory;
             this.clientSettings = clientSettings;

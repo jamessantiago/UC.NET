@@ -29,7 +29,7 @@ namespace UcClient_10_5.Tests
                         lastName = "test"
                     }
                 };
-                var response = await client.addUserAsync(request);
+                var response = await client.addUserAsync(request);                
                 return response.addUserResponse1.@return;
             });
 
@@ -214,6 +214,33 @@ namespace UcClient_10_5.Tests
             });
 
             Assert.IsNull(data.Exception);
+        }
+
+        [TestMethod]
+        public void ListServers()
+        {
+            var axlClient = new AxlClient(new UcClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
+            var presenceservers = axlClient.Execute(client =>
+            {
+                return client.listAssignedPresenceServers(new ListAssignedPresenceServersReq
+                {
+                    searchCriteria = new ListAssignedPresenceServersReqSearchCriteria
+                    {
+                        name = ""
+                    }
+                });
+            });
+
+            var servers = axlClient.Execute(client =>
+            {
+                return client.listProcessNode(new ListProcessNodeReq {
+                    searchCriteria = new ListProcessNodeReqSearchCriteria { name = "" },
+                    returnedTags = new LProcessNode()
+                });
+            });
+
+            if (servers.Exception != null) throw servers.Exception;
+            Assert.IsNotNull(servers.Value);
         }
     }
 }

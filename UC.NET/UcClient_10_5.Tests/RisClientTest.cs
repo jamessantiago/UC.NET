@@ -32,8 +32,7 @@ namespace UcClient_10_5.Tests
                     DownloadStatus = DeviceDownloadStatus.Any,
                 };
 
-                var res = client.selectCmDevice(string.Empty, criteria);
-
+                var res = client.selectCmDevice(string.Empty, criteria);                
                 return res;
             });
 
