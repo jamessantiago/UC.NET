@@ -13,9 +13,7 @@ namespace AxlNetClient
             ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, errors) => true;
             ServicePointManager.Expect100Continue = false;                
             
-            var basicHttpBinding = new BasicHttpsBinding(BasicHttpsSecurityMode.Transport);
-            basicHttpBinding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;         
-
+            var basicHttpBinding = new BasicHttpsBinding(BasicHttpsSecurityMode.Transport);            
 
             basicHttpBinding.MaxReceivedMessageSize = 20000000;
             basicHttpBinding.MaxBufferSize = 20000000;
@@ -26,16 +24,12 @@ namespace AxlNetClient
             basicHttpBinding.ReaderQuotas.MaxStringContentLength = 20000000;
             basicHttpBinding.ReaderQuotas.MaxNameTableCharCount = 20000000;
 
-            basicHttpBinding.TransferMode = TransferMode.Buffered;
-            //basicHttpBinding.UseDefaultWebProxy = false;
+            basicHttpBinding.TransferMode = TransferMode.Streamed;
 
             var axlEndpointUrl = string.Format(AxlEndpointUrlFormat, settings.Server);
             var endpointAddress = new EndpointAddress(axlEndpointUrl);
-            var axlClient = new AXLPortClient(basicHttpBinding, endpointAddress);
-            axlClient.ClientCredentials.UserName.UserName = settings.User;
-            axlClient.ClientCredentials.UserName.Password = settings.Password;
-            axlClient.Endpoint.EndpointBehaviors.Add(new AuthenticationBehavior(settings.User, settings.Password));
-            axlClient.Endpoint.Contract.Namespace = "AxlNetClient.AXLPort";
+            var axlClient = new AXLPortClient(basicHttpBinding, endpointAddress);            
+            axlClient.Endpoint.EndpointBehaviors.Add(new AuthenticationBehavior(settings.User, settings.Password));            
             return axlClient;            
         }
     }

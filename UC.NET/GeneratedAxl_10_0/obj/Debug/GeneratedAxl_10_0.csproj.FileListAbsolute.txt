@@ -1,5 +1,0 @@
-D:\Code\UC.NET\UC.NET\GeneratedAxl_10_0\obj\Debug\GeneratedAxl_10_0.csprojResolveAssemblyReference.cache
-D:\Code\UC.NET\UC.NET\GeneratedAxl_10_0\bin\Debug\GeneratedAxl_10_0.dll
-D:\Code\UC.NET\UC.NET\GeneratedAxl_10_0\bin\Debug\GeneratedAxl_10_0.pdb
-D:\Code\UC.NET\UC.NET\GeneratedAxl_10_0\obj\Debug\GeneratedAxl_10_0.dll
-D:\Code\UC.NET\UC.NET\GeneratedAxl_10_0\obj\Debug\GeneratedAxl_10_0.pdb
