@@ -24,12 +24,11 @@ namespace AxlNetClient
             basicHttpBinding.ReaderQuotas.MaxStringContentLength = 20000000;
             basicHttpBinding.ReaderQuotas.MaxNameTableCharCount = 20000000;
 
-            basicHttpBinding.TransferMode = TransferMode.Streamed;
+            basicHttpBinding.TransferMode = TransferMode.Buffered;
 
             var axlEndpointUrl = string.Format(AxlEndpointUrlFormat, settings.Server);
             var endpointAddress = new EndpointAddress(axlEndpointUrl);
-            var axlClient = new AXLPortClient(basicHttpBinding, endpointAddress);            
-            axlClient.Endpoint.EndpointBehaviors.Add(new AuthenticationBehavior(settings.User, settings.Password));            
+            var axlClient = new AXLPortClient(basicHttpBinding, endpointAddress, settings.User, settings.Password);            
             return axlClient;            
         }
     }

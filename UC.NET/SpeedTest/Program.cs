@@ -23,7 +23,7 @@ namespace SpeedTest
             var data = axlClient.Execute(client =>
             {
                 Console.WriteLine("Executing");
-                Console.WriteLine(sw.Elapsed.ToString());
+                Console.WriteLine(sw.Elapsed.ToString());                
                 var res = client.getPhone(new GetPhoneReq
                 {
                     ItemElementName = ItemChoiceType140.name,
