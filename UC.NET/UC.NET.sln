@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratedAxl_10_0", "GeneratedAxl_10_0\GeneratedAxl_10_0.csproj", "{A3D09840-210A-4179-85E2-637A408AFBA3}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedTest", "SpeedTest\SpeedTest.csproj", "{EE088D5B-84C1-4DD7-91E8-947725A97F0B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratedPerf_10_5", "GeneratedPerf_10_5\GeneratedPerf_10_5.csproj", "{56B36D96-9BBF-435F-9437-67C5C12BA586}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratedEpas_10_5", "GeneratedEpas_10_5\GeneratedEpas_10_5.csproj", "{186DF391-9D60-4A6E-A422-D8F36751CFFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{56B36D96-9BBF-435F-9437-67C5C12BA586}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56B36D96-9BBF-435F-9437-67C5C12BA586}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56B36D96-9BBF-435F-9437-67C5C12BA586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{186DF391-9D60-4A6E-A422-D8F36751CFFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{186DF391-9D60-4A6E-A422-D8F36751CFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{186DF391-9D60-4A6E-A422-D8F36751CFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{186DF391-9D60-4A6E-A422-D8F36751CFFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

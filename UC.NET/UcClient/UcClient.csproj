@@ -54,6 +54,10 @@
     <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EpasClient\IEpasClient.cs" />
+    <Compile Include="EpasClient\IEpasClientFactory.cs" />
+    <Compile Include="EpasClient\EpasClient.cs" />
+    <Compile Include="EpasClient\EpasClientFactory.cs" />
     <Compile Include="PerfClient\PerfClient.cs" />
     <Compile Include="PerfClient\PerfClientFactory.cs" />
     <Compile Include="PerfClient\IPerfClient.cs" />
@@ -81,6 +85,10 @@
     <ProjectReference Include="..\GeneratedAxl_10_5\GeneratedAxl_10_5.csproj">
       <Project>{10fa10d2-fdfb-42a6-bd58-59f39bf9cf5c}</Project>
       <Name>GeneratedAxl_10_5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeneratedEpas_10_5\GeneratedEpas_10_5.csproj">
+      <Project>{186df391-9d60-4a6e-a422-d8f36751cfff}</Project>
+      <Name>GeneratedEpas_10_5</Name>
     </ProjectReference>
     <ProjectReference Include="..\GeneratedPerf_10_5\GeneratedPerf_10_5.csproj">
       <Project>{56b36d96-9bbf-435f-9437-67c5c12ba586}</Project>

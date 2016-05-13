@@ -131,7 +131,7 @@
     <Compile Include="Client.AXLPortClient83.cs" />
     <Compile Include="Client.AXLPortClient9.cs" />
     <Compile Include="Client.Inspector.cs" />
-    <Compile Include="ClientOut.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

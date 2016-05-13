@@ -35,6 +35,22 @@ namespace SpeedTest
                 throw data.Exception;
 
             Console.WriteLine(data.Value.phone.name);
+            Console.WriteLine(sw.Elapsed.ToString());
+
+            data = axlClient.Execute(client =>
+            {
+                Console.WriteLine("Executing");
+                Console.WriteLine(sw.Elapsed.ToString());
+                var res = client.getPhone(new GetPhoneReq
+                {
+                    ItemElementName = ItemChoiceType140.name,
+                    Item = "C"
+                });
+                return res.@return;
+            });
+            if (data.Exception != null)
+                Console.WriteLine(data.Exception.Message);
+            
             sw.Stop();
             Console.WriteLine(sw.Elapsed.ToString());
         }
