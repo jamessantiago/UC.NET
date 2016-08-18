@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Diagnostics;
 using AxlNetClient;
 using System.Linq;
 using System.Threading.Tasks;
@@ -30,7 +31,7 @@ namespace UcClient_10_5.Tests
                     }
                 };
                 var response = await client.addUserAsync(request);                
-                return response.addUserResponse1.@return;
+                return response.addUserResponse1.@return;                
             });
 
             Assert.Inconclusive(addUserResult.Exception.Message);
@@ -161,6 +162,31 @@ namespace UcClient_10_5.Tests
             if (data.Exception != null) throw data.Exception;
 
             Assert.IsNotNull(data.Value);
+        }
+
+        [TestMethod]
+        public void GetPhone10()
+        {
+            var axlClient = new AxlClient(new UcClientSettings { Server = "10.10.20.1", User = "administrator", Password = "ciscopsdt" });
+
+            for (int i = 0; i < 25; i++)
+            {
+                var sw = new Stopwatch();
+                sw.Start();
+                var data = axlClient.Execute(client =>
+                {
+                    var res = client.getPhone(new GetPhoneReq
+                    {
+                        ItemElementName = ItemChoiceType140.name,
+                        Item = "CSFuser001"
+                    });                                        
+                    return res.@return.phone;
+                });
+
+                if (data.Exception != null) throw data.Exception;
+                sw.Stop();                
+                if (sw.ElapsedMilliseconds > 10000) throw new Exception("Took too long: " + sw.ElapsedMilliseconds);
+            }
         }
 
         [TestMethod]

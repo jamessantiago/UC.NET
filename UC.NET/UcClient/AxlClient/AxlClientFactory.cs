@@ -11,7 +11,7 @@ namespace AxlNetClient
         public AXLPortClient CreateClient(IUcClientSettings settings)
         {
             ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, errors) => true;
-            ServicePointManager.Expect100Continue = false;                
+            ServicePointManager.Expect100Continue = false;
             
             var basicHttpBinding = new BasicHttpsBinding(BasicHttpsSecurityMode.Transport);            
 

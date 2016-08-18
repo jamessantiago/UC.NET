@@ -56,6 +56,7 @@
     <Compile Include="RisClientTest.cs" />
     <Compile Include="AxlClientTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RosterClientTest.cs" />
     <Compile Include="WebexClientTests.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +75,10 @@
     <ProjectReference Include="..\GeneratedRis_10_5\GeneratedRis_10_5.csproj">
       <Project>{1d440205-6f11-46b7-8eac-3b105a4cdd24}</Project>
       <Name>GeneratedRis_10_5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeneratedRoster_10_5\GeneratedRoster_10_5.csproj">
+      <Project>{e432a69e-c492-45ef-ab49-c9204a7d7c5e}</Project>
+      <Name>GeneratedRoster_10_5</Name>
     </ProjectReference>
     <ProjectReference Include="..\GeneratedWebexXml_5_8\GeneratedWebexXml_5_8.csproj">
       <Project>{c22c6b60-8f19-47e1-8e64-9efb60426fa9}</Project>

@@ -14,11 +14,11 @@ namespace UcClient_10_5.Tests
         private static WebexClient webexClient = new WebexClient(new WebexClientSettings()
         {
             SiteId = 690319,
-            PartnetId = "g0webx",
+            PartnetId = "g0webx!",
             Server = "apidemoeu.webex.com",
-            User = "TestConf12",
+            User = "TestConfId3",
             Password = "password",
-            Email = "test.user@email.domain"
+            Email = "test.user4@email.com"
 
         });
 
@@ -30,7 +30,7 @@ namespace UcClient_10_5.Tests
             {
                 var res = client.getUserAsync(new getUser
                 {
-                    webExId = "TestConf12"
+                    webExId = "TestConfId3"
                 });
 
                 return res;
@@ -58,5 +58,89 @@ namespace UcClient_10_5.Tests
 
             Assert.IsNotNull(user.Value);
         }
+
+        [TestMethod]
+        public void CreateMeetingTest()
+        {
+            var meetings = webexClient.Execute(client =>
+            {
+                var res = client.createMeeting(new createMeeting
+                {
+                    accessControl = new accessControlType1
+                    {
+                        meetingPassword = "password"
+                    },
+                    metaData = new metaDataType1
+                    {
+                        confName = "Sample Meeting",
+                        meetingType = 1,
+                        agenda = "Test"
+                    },
+                    enableOptions = new enableOptionsType1
+                    {
+                        chat = true,
+                        poll = true,
+                        audioVideo = true
+                    },
+                    schedule = new scheduleType1
+                    {
+                        startDate = DateTime.Now.ToString(),
+                        openTime = 900,
+                        joinTeleconfBeforeHost = true,
+                        duration = 20,
+                        timeZoneID = 4
+                    }
+                });
+                return res;
+            });
+            if (meetings.Exception != null) throw meetings.Exception;
+
+            Assert.IsNotNull(meetings.Value);
+        }
+
+        [TestMethod]
+        public void GetMeetingsTest()
+        {
+            var meetings = webexClient.Execute(client =>
+            {
+                var res = client.lstsummaryMeeting(new lstsummaryMeeting
+                {
+                    listControl = new lstControlType
+                    {
+                        startFrom = "1",
+                        maximumNum = "10",
+                        listMethod = lstMethodType.OR,
+                        listMethodSpecified = true
+                    },
+                    order = new orderType3
+                    {
+                        orderBy = new orderByType3[] { orderByType3.CONFNAME, orderByType3.STARTTIME }
+                    }
+                });
+                return res;
+            });
+
+            if (meetings.Exception != null) throw meetings.Exception;
+
+            Assert.IsNotNull(meetings.Value);
+        }
+
+        [TestMethod]
+        public void DeleteMeetingTest()
+        {
+            var results = webexClient.Execute(client =>
+            {
+                var res = client.delMeeting(new delMeeting
+                {
+                    meetingKey = 123456
+                });
+                return res;
+            });
+
+            if (results.Exception != null) throw results.Exception;
+
+            Assert.IsNotNull(results.Value);
+        }
+
     }
 }
