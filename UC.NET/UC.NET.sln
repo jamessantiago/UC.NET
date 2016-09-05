@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratedEpas_10_5", "Gener
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratedRoster_10_5", "GeneratedRoster_10_5\GeneratedRoster_10_5.csproj", "{E432A69E-C492-45EF-AB49-C9204A7D7C5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratedWebexXml_5_9", "GeneratedWebexXml_5_9\GeneratedWebexXml_5_9.csproj", "{3B3D82A9-2976-4EF8-96FF-EEE7CB6EB8AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{E432A69E-C492-45EF-AB49-C9204A7D7C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E432A69E-C492-45EF-AB49-C9204A7D7C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E432A69E-C492-45EF-AB49-C9204A7D7C5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B3D82A9-2976-4EF8-96FF-EEE7CB6EB8AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B3D82A9-2976-4EF8-96FF-EEE7CB6EB8AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B3D82A9-2976-4EF8-96FF-EEE7CB6EB8AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B3D82A9-2976-4EF8-96FF-EEE7CB6EB8AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

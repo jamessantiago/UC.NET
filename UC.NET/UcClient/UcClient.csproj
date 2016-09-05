@@ -106,9 +106,9 @@
       <Project>{e432a69e-c492-45ef-ab49-c9204a7d7c5e}</Project>
       <Name>GeneratedRoster_10_5</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GeneratedWebexXml_5_8\GeneratedWebexXml_5_8.csproj">
-      <Project>{c22c6b60-8f19-47e1-8e64-9efb60426fa9}</Project>
-      <Name>GeneratedWebexXml_5_8</Name>
+    <ProjectReference Include="..\GeneratedWebexXml_5_9\GeneratedWebexXml_5_9.csproj">
+      <Project>{3b3d82a9-2976-4ef8-96ff-eee7cb6eb8ab}</Project>
+      <Name>GeneratedWebexXml_5_9</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

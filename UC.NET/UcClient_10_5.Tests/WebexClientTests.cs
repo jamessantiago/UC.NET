@@ -49,7 +49,7 @@ namespace UcClient_10_5.Tests
                 var res = client.setUser(new setUser
                 {
                     webExId = "TestConf12",
-                    active = activeType.ACTIVATED
+                    active = activeType.ACTIVATED                    
                 });
                 return res;
             });
@@ -99,11 +99,11 @@ namespace UcClient_10_5.Tests
         }
 
         [TestMethod]
-        public void GetMeetingsTest()
+        public void LstMeetingsTest()
         {
             var meetings = webexClient.Execute(client =>
             {
-                var res = client.lstsummaryMeeting(new lstsummaryMeeting
+                var res = client.LstsummaryMeeting(new LstsummaryMeeting
                 {
                     listControl = new lstControlType
                     {
@@ -126,11 +126,25 @@ namespace UcClient_10_5.Tests
         }
 
         [TestMethod]
+        public void GetMeetingTest()
+        {
+            var meeting = webexClient.Execute(client =>
+            {
+                return client.GetMeeting(new GetMeeting
+                {
+                    meetingKey = 123456
+                });
+            });
+
+            if (meeting.Exception != null) throw meeting.Exception;
+        }
+
+        [TestMethod]
         public void DeleteMeetingTest()
         {
             var results = webexClient.Execute(client =>
             {
-                var res = client.delMeeting(new delMeeting
+                var res = client.DelMeeting(new DelMeeting
                 {
                     meetingKey = 123456
                 });
